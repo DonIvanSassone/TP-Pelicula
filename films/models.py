@@ -9,6 +9,8 @@ class FilmsToWatch(models.Model):
     Director = models.CharField(max_length = 30)
     Duration = models.CharField(max_length = 6)
     Genres = models.CharField(max_length = 200)
+    published_date = models.DateTimeField(
+            blank=True, null=True)
     RATE_CHOICES = (
         (1,"1"),
         (2,"2"),
