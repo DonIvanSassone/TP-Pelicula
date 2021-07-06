@@ -3,5 +3,5 @@ from django.utils import timezone
 from .models import FilmsToWatch
 
 def post_list(request):
-    Films = FilmsToWatch.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-    return render(request, 'films/post_list.html', {'Films': Films})
+    allFilms = FilmsToWatch.objects.filter(Year__lte=timezone.now()).order_by('Year')
+    return render(request, 'films/post_list.html', {'allFilms': allFilms})

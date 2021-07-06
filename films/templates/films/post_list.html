@@ -7,11 +7,8 @@
             <h1><a href="/">Films to watch</a></h1>
         </div>
 
-        {% for FilmsToWatch in Films %}
             <div>
-                <p> publicado: {{ FilmsToWatch.published_date }}</p>
-                <h2><a href="">{{ FilmsToWatch.Originalname }}</a></h2>
+                {% for film in allFilms %} {{ film.Originalname }}{% endfor %}
             </div>
-        {% endfor %}
     </body>
 </html>
