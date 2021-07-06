@@ -1,14 +1,25 @@
 <html>
     <head>
-        <title>Django Girls blog</title>
+        <title>Movies</title>
     </head>
     <body>
         <div>
-            <h1><a href="/">Films to watch</a></h1>
+            <h1><a href="/">Information General of Films</a></h1>
         </div>
 
             <div>
-                {% for film in allFilms %} {{ film.Originalname }}{% endfor %}
+                <p> Name: {% for film in allFilms %} {{ film.Originalname }}{% endfor %}</p>
+                <p> Date of premiere: {% for film in allFilms %} {{ film.Year }}{% endfor %}</p>
+                <p> Director: {% for film in allFilms %} {{ film.Director }}{% endfor %}</p>
+                <p> Genres: {% for film in allFilms %} {{ film.Genres }}{% endfor %}</p>
+                <p> Duration: {% for film in allFilms %} {{ film.Duration }}{% endfor %}</p>
             </div>
+
+            <div>
+                <h1><a href="/">Synopsis</a></h1>
+                 {% for film in allFilms %} {{ film.Sinopsis }}{% endfor %}
+                 <p> Rate: {% for film in allFilms %} {{ film.Rate }}{% endfor %}</p>
+            </div>
+            
     </body>
 </html>
